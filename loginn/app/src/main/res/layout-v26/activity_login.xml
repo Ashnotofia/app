@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".LoginActivity"
+    android:background="@color/themebg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="100dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="200dp">
+
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="WELCOME TO S-I-D-E-K-I-C-K"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/welcome"/>
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Email"
+            android:background="@color/white"
+            android:textColor="@color/bur"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="1dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@color/white"
+            android:textColor="@color/bur"
+            />
+
+        <TextView
+            android:id="@+id/tvFP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:linksClickable="true"
+            android:text="@string/ForgotPassword"
+            android:textAlignment="center"
+            android:textColor="#6666FF"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:text="LOG IN"
+            android:textSize="20dp"
+            android:textStyle="bold"
+           >
+
+        </Button>
+
+        <TextView
+            android:id="@+id/tvOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="1dp"
+            android:text="OR"
+            android:textAlignment="center"
+
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnFB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:text="Continue with FACEBOOK"
+            android:background="@color/yellow"
+            android:textSize="10dp"
+            android:theme="@style/ButtonStyle"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:textAllCaps="false"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:text="Continue with GOOGLE"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:theme="@style/ButtonStyle"
+            android:drawableLeft="@drawable/ic_google"
+            android:textStyle="bold">
+
+        </Button>
+
+
+        <View
+            style="@style/Divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp" />
+
+
+        <TextView
+            android:id="@+id/tvNOT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/NOT"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:linksClickable="true"
+            android:text="@string/SignUp"
+            android:textAlignment="center"
+            android:textColor="#6666FF"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="1dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

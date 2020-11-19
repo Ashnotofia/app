@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Women Safety App</string>
+    <string name="profile">Profile</string>
+    <string name="contact">Contact</string>
+
+    <string name="openNavDrawer"> Navigation Drawer Open</string>
+    <string name="closeNavDrawer"> Navigation Drawer Closed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ForgotPassword"> Forgot Password?</string>
+    <string name="NOT"> Not on S-I-D-E-K-I-C-K yet? </string>
+    <string name="SignUp">Sign Up! </string>
+    <string name="help">Please follow the below steps properly:\n\n\n\t1:Register Your Phone Number.\n\t2:Register Your Guardian Numbers.\n\t3:Always maintain working internet \n\t connection.\n\t4:SHAKE your phone vertically 3 times \n\t to ask for "HELP" in case of emergency \n\t to alert your guardians.</string>
+    <string name="Privacy_Policy">
+       <H4><b>MIT License </b></H4> \n
+
+
+<H5><b>Copyright (c) 2020 S-I-D-E-K-I-C-K </b></H5> \n\n
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:  \n\n
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.  \n\n
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+    </string>
+
+
+    <string name="About_App">
+
+ Features of the app- \n\n
+
+1.SOS/Emergency - Send a SMS containing- \"I am In Danger\" to selected 3 contacts and your GPS location to track you with 3 vertical phone swings or just a click of a button. \n
+2.Alarm - An alarm (Police Siren) is set up within 5 seconds. It may help to scare the pursuer. \n
+3.Fake Call- How often, do we think that if we had an incoming call right now, it can save us from the situation we are in right now. \n
+4.Camera - Email the latest Media clicked by your Camera in every 10 minutes to your emergency contacts and save it on your secondary Storage. \n
+
+
+    </string>
+
+    <string name="App_Detail">
+        An Android App for everyone irrespective of any gender discrimination (but especially developed for Women Saftey), which will send SOS/Emergancy message to registered Emergency numbers, based on a specific 3-5 vertical swings. The SOS will be comprised of user\'s current GPS coordinates,personal information and latest media in your storage to those numbers.
+
+Make Sure that "Google" ,"WhatApp","Gmail" App is Installed on your phone and you give this App proper Access Permission like Call, SMS, Microphone, Camera, GPS.
+    </string>
+</resources>

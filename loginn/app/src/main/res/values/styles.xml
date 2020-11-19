@@ -1,0 +1,43 @@
+<resources>
+    <!-- Base application theme.  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerIconStyle</item>
+        <item name="android:textColor">@color/matblack</item>
+
+    </style>
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.navTheme">
+
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">@color/bur2</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">@color/burdark1</item>
+
+    </style>
+    <style name="MyEditTextStyle" parent="Widget.AppCompat.EditText">
+    <item name="colorControlActivated">#dc8f41</item>
+</style>
+
+    <style name="Divider">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">	#4267B2</item>
+
+    </style>
+
+
+</resources>

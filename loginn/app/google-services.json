@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "206504531135",
+    "firebase_url": "https://loginn-f5930.firebaseio.com",
+    "project_id": "loginn-f5930",
+    "storage_bucket": "loginn-f5930.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206504531135:android:17019affd494ae914d220a",
+        "android_client_info": {
+          "package_name": "com.example.loginn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206504531135-dmkh9o59rds6pajkdj83kjs8plgg69h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginn",
+            "certificate_hash": "bd4c982c9b95cf43c1bc83c968119825792ec932"
+          }
+        },
+        {
+          "client_id": "206504531135-fdft962pdk1opf9i4b8g4jjdkiecv4k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3YTboV4lpXk4Woi19VtWLceZN-WGj4BU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206504531135-fdft962pdk1opf9i4b8g4jjdkiecv4k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

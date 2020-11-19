@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/nav_home"
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        </group>
+
+        <item android:title="App Data">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/ic_account_circle_24px"
+                    android:id="@+id/nav_profile"
+                    android:title="@string/profile" />
+                <item
+                    android:icon="@drawable/ic_contacti"
+                    android:id="@+id/nav_contact"
+                    android:title="@string/contact" />
+                <item
+                    android:icon="@drawable/ic_storage_24px"
+                    android:title="Storage"
+                    android:id="@+id/nav_storage"/>
+                <item
+                    android:icon="@drawable/ic_movie_24px"
+                    android:id="@+id/nav_media"
+                    android:title="Media" />
+                </group>
+            </menu>
+        </item>
+
+
+        <item android:title="INFO">
+
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/ic_privacy_tip_24px"
+                    android:title="Privacy"
+                    android:id="@+id/nav_privacy"/>
+                <item
+                    android:icon="@drawable/ic_info_24px"
+                    android:title="About App"
+                    android:id="@+id/nav_about"/>
+    </group>
+            </menu>
+        </item>
+
+
+        <item
+            android:title="APP"
+            android:visible="true">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/ic_settings_24px"
+                    android:title="Settings"
+                    android:id="@+id/nav_setting"/>
+                <item
+                    android:icon="@drawable/ic_power_settings_new_24px"
+                    android:title="Log Out"
+                    android:id="@+id/nav_logout"/>
+    </group>
+            </menu>
+        </item>
+
+</menu>
