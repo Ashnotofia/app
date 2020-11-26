@@ -15,16 +15,35 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingTop="30dp"
+        android:paddingTop="100dp"
         android:paddingRight="24dp"
-        android:paddingBottom="30dp"
+        android:paddingBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
+
         <TextView
-            android:id="@+id/tvEnterContact"
+            android:id="@+id/CN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:textColor="@color/bur"
+            />
+        <TextView
+            android:id="@+id/C1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -36,135 +55,110 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:ems="30"
-
-            android:background="@color/bur"
-            android:text="Enter Emergency Contact Details"
-            android:textColor="@color/white"
-            />
-        <EditText
-            android:id="@+id/etCN1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
             android:background="@color/white"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:text=""
             android:textColor="@color/bur"
-            android:hint="      First Contact Name"
             />
 
-        <EditText
-            android:id="@+id/etC1"
+        <TextView
+            android:id="@+id/CN2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="number"
-            android:textColor="@color/bur"
-            android:hint="      Contact no. 1"
-            android:drawableLeft="@drawable/contact_icon"
-            />
-        <EditText
-            android:id="@+id/etCN2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@color/bur"
-            android:hint="      Second Contact Name"
-
-            />
-
-        <EditText
-            android:id="@+id/etC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
             android:background="@color/white"
-            android:ems="10"
-            android:inputType="number"
+            android:text=""
             android:textColor="@color/bur"
-            android:hint="      Contact no. 2"
-            android:drawableLeft="@drawable/contact_icon"
             />
-        <EditText
-            android:id="@+id/etCN3"
+        <TextView
+            android:id="@+id/C2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@color/bur"
-            android:hint="      Third Contact Name"
-
-            />
-        <EditText
-            android:id="@+id/etC3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
             android:background="@color/white"
-            android:ems="10"
-            android:inputType="number"
+            android:text=""
             android:textColor="@color/bur"
-            android:hint="      Contact no. 3"
-            android:drawableLeft="@drawable/contact_icon"
             />
+
+        <TextView
+            android:id="@+id/CN3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:textColor="@color/bur"
+            />
+        <TextView
+            android:id="@+id/C3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:textColor="@color/bur"
+            />
+
+
         <Button
-            android:id="@+id/btnContact"
+            android:id="@+id/btnRefresh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="80dp"
-            android:layout_marginBottom="5dp"
-            android:text="SAVE"
+            android:layout_marginBottom="10dp"
+            android:text="Refresh"
             android:textSize="20dp"
             android:textStyle="bold">
         </Button>
+
+
         <Button
-            android:id="@+id/btnRetrive"
+            android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="80dp"
-            android:layout_marginBottom="1dp"
-            android:text="Show Details"
-            android:textSize="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="BACK"
+            android:textSize="20dp"
             android:textStyle="bold">
         </Button>
-
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

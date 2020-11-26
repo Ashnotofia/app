@@ -1,5 +1,6 @@
 package com.example.loginn;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -63,10 +64,10 @@ public class RegisterActivity extends AppCompatActivity {
         etPassReR = (EditText) findViewById(R.id.etPassReR);
         btnRegister = (Button) findViewById(R.id.btnRegister);
 
-        etFNameR = (EditText) findViewById(R.id.etFNameR);
-        etUserNameR = (EditText) findViewById(R.id.etUserNameR);
-        etPhoneR = (EditText) findViewById(R.id.etPhoneR);
-        etDOBR = (EditText) findViewById(R.id.etDOBR);
+//        etFNameR = (EditText) findViewById(R.id.etFNameR);
+//        etUserNameR = (EditText) findViewById(R.id.etUserNameR);
+//        etPhoneR = (EditText) findViewById(R.id.etPhoneR);
+//        etDOBR = (EditText) findViewById(R.id.etDOBR);
 
         tvAlreadyR = (TextView) findViewById(R.id.tvAlreadyR);
 
@@ -127,6 +128,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    private void playProgress() {
+        ObjectAnimator.ofInt(progressBar, "progress", 100)
+                .setDuration(2000)
+                .start();
     }
 
     private void registerUser(String email, String pass) {

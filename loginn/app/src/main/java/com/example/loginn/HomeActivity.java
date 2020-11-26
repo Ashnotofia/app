@@ -14,6 +14,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.codemybrainsout.ratingdialog.RatingDialog;
+
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
@@ -92,6 +94,23 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_privacy:
             {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PrivacyFragment()).commit();
+                break;
+            }
+            case R.id.nav_setting:
+            {
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PrivacyFragment()).commit();
+//                break;
+
+                final RatingDialog ratingDialog = new RatingDialog.Builder(this)
+                        .threshold(3)
+                        .onRatingBarFormSumbit(new RatingDialog.Builder.RatingDialogFormListener() {
+                            @Override
+                            public void onFormSubmitted(String feedback) {
+
+                            }
+                        }).build();
+
+                ratingDialog.show();
                 break;
             }
 

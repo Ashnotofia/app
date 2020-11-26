@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
     private ImageView ph_fakecall;
     private ImageView ph_camera;
     private ImageView ph_mail;
-
+    android.hardware.Camera camera ;
 
 
 //    @Override
@@ -51,6 +51,8 @@ public class HomeFragment extends Fragment {
         View v= inflater.inflate(R.layout.frag_home,container,false) ;
 
 
+//        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+//        Toast.makeText(getActivity(), "" + currentFirebaseUser.getUid(), Toast.LENGTH_SHORT).show();
 
         globalContext = this.getActivity();
 
@@ -125,14 +127,37 @@ public class HomeFragment extends Fragment {
             }
           });
 
-
+//ph_mail.setOnClickListener(new View.OnClickListener() {
+//    @Override
+//    public void onClick(View v) {
+//        Intent intent = new Intent(getActivity(), Contactd.class);
+//        startActivity(intent);
+//    }
+//});
 
 ph_camera.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 //        Intent intent = new Intent(getActivity(), LoginActivity.class);
 //        startActivity(intent);
-        Toast.makeText(getActivity(), "Alarm will start with in five seconds", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getActivity(), "Alarm will start with in five seconds", Toast.LENGTH_SHORT).show();
+//
+        //Intent intent = new Intent(getActivity(), camera.class);
+        Intent intent = new Intent(getActivity(), camera.class);
+        startActivity(intent);
+
+
+
+//        public static Camera getCameraInstance(){
+//            Camera c = null;
+//            try {
+//                c = Camera.open(); // attempt to get a Camera instance
+//            }
+//            catch (Exception e){
+//                // Camera is not available (in use or does not exist)
+//            }
+//            return c; // returns null if camera is unavailable
+//        }
     }
 });
 
