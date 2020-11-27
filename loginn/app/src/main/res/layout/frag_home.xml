@@ -113,11 +113,82 @@
             </ImageView>
 
         </RelativeLayout>
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:visibility="invisible"
+            android:textColor="@color/bur"
+            />
 
 
 
+        <TextView
+            android:id="@+id/Cs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:visibility="invisible"
+            android:textColor="@color/bur"
+            />
+        <TextView
+            android:id="@+id/Cs2"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:visibility="invisible"
+            android:textColor="@color/bur"
+            />
 
-
+        <TextView
+            android:id="@+id/Cs3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="30"
+            android:background="@color/white"
+            android:text=""
+            android:visibility="invisible"
+            android:textColor="@color/bur"
+            />
 
 
 

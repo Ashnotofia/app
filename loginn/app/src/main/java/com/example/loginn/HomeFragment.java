@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,12 +17,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class HomeFragment extends Fragment {
 
     private Context globalContext = null;
-
-
-
+    private DatabaseReference mDatabaseReference;
+private TextView tv4;
+    private SmsManager sm;
     private ImageView ph_sos;
 
     private ImageView ph_alarm;
@@ -28,7 +32,7 @@ public class HomeFragment extends Fragment {
     private ImageView ph_camera;
     private ImageView ph_mail;
     android.hardware.Camera camera ;
-
+    private TextView Cs1,Cs2,Cs3;
 
 //    @Override
 //    public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +65,10 @@ public class HomeFragment extends Fragment {
         ph_fakecall = v.findViewById(R.id.ph_fakecall);
         ph_camera = v.findViewById(R.id.ph_camera);
         ph_mail = v.findViewById(R.id.ph_mail);
+        tv4 = v.findViewById(R.id.tv4);
+        Cs1 = v.findViewById(R.id.Cs1);
+        Cs2 = v.findViewById(R.id.Cs2);
+        Cs3 = v.findViewById(R.id.Cs3);
 
 
         View alertLayout = inflater.inflate(R.layout.popup_layout, null);
@@ -106,6 +114,21 @@ public class HomeFragment extends Fragment {
 //                        isPlaing = true;
 //                    }
 //                }
+        GPSTracker mGPS = new GPSTracker(getActivity());
+
+
+        if(mGPS.canGetLocation ){
+            mGPS.getLocation();
+            tv4.setText(  mGPS.getLatitude() + "," + mGPS.getLongitude());
+
+        }else{
+            tv4.setText("Unabletofind");
+//            System.out.println("Unable");
+        }
+
+        sm= SmsManager.getDefault();
+
+
         final MediaPlayer sound = MediaPlayer.create(getActivity(),R.raw.policesiren);
 
         ph_alarm.setOnClickListener(new View.OnClickListener() {
@@ -180,6 +203,47 @@ ph_fakecall.setOnClickListener(new View.OnClickListener() {
 //            }
 //        });
 
+//        ph_sos.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               // Toast.makeText(getActivity(),"sos working",Toast.LENGTH_LONG).show();
+//                //sm= SmsManager.getDefault();
+//                mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("ContactRoom");
+//                mDatabaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+////                        if(dataSnapshot.exists()){
+////
+////                        }
+//                      //  sm= SmsManager.getDefault();
+//                        String etC1db = dataSnapshot.child("etC1").getValue().toString();
+//                        String etC2db = dataSnapshot.child("etC2").getValue().toString();
+//                        String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//
+//
+//                        Cs1.setText(etC1db);
+//                        Cs2.setText(etC2db);
+//                        Cs3.setText(etC3db);
+//
+//                        sm.sendTextMessage(Cs1.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//                        sm.sendTextMessage(Cs2.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//                        sm.sendTextMessage(Cs3.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//
+//                        Toast.makeText(getActivity(),"message sent",Toast.LENGTH_LONG).show();
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//
+//            }
+//        });
+
+
+
+
         return v;
     }
 //
@@ -187,4 +251,16 @@ ph_fakecall.setOnClickListener(new View.OnClickListener() {
 //    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 //        super.onViewCreated(view, savedInstanceState);
 //    }
+
+
+//    public void send(View view){
+//
+//        sm.sendTextMessage(Cs1.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//        sm.sendTextMessage(Cs2.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//        sm.sendTextMessage(Cs3.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tv4.getText().toString(),null,null);
+//
+//        Toast.makeText(getActivity(),"message sent",Toast.LENGTH_LONG).show();
+//
+//    }
+
 }

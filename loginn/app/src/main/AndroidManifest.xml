@@ -18,9 +18,6 @@
     <uses-feature
         android:name="android.hardware.location.gps"
         android:required="false" />
-
-
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -35,7 +32,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileDe"></activity>
+        <activity android:name=".SOS"></activity>
+        <activity android:name=".ProfileDe" />
         <activity android:name=".ContactDe" />
         <activity android:name=".camera" />
         <activity android:name=".RecievedCall" />
@@ -44,6 +42,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
