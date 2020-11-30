@@ -11,9 +11,14 @@
     <string name="ForgotPassword"> Forgot Password?</string>
     <string name="NOT"> Not on S-I-D-E-K-I-C-K yet? </string>
     <string name="SignUp">Sign Up! </string>
+
+    <string name="WhatApp"> Help!! I\'m in <b>DANGER</b> \n My current location is http://maps.google.com/?q=19.0410042,73.0168106 </string>
+
     <string name="help">Please follow the below steps properly:\n\n\n\t1:Register Your Phone Number.\n\t2:Register Your Guardian Numbers.\n\t3:Always maintain working internet \n\t connection.\n\t4:SHAKE your phone vertically 3 times \n\t to ask for "HELP" in case of emergency \n\t to alert your guardians.</string>
     <string name="Privacy_Policy">
        <H4><b>MIT License </b></H4> \n
+
+
 
 
 <H5><b>Copyright (c) 2020 S-I-D-E-K-I-C-K </b></H5> \n\n

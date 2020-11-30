@@ -149,7 +149,13 @@ private TextView tv4;
 
             }
           });
-
+        ph_mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), EmailActivity.class);
+                startActivity(intent);
+            }
+        });
 //ph_mail.setOnClickListener(new View.OnClickListener() {
 //    @Override
 //    public void onClick(View v) {
