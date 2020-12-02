@@ -17,13 +17,26 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 public class HomeFragment extends Fragment {
 
+
+
+    //String etC1db="9869750730";
+    //String Mdb="aaya kya msg!!";
+    String Mdb;
+    String pp,pp1,pp2;
     private Context globalContext = null;
-    private DatabaseReference mDatabaseReference;
-private TextView tv4;
+
+    private TextView tvM;
     private SmsManager sm;
     private ImageView ph_sos;
 
@@ -33,7 +46,11 @@ private TextView tv4;
     private ImageView ph_mail;
     android.hardware.Camera camera ;
     private TextView Cs1,Cs2,Cs3;
+    private GoogleMap mMap;
+    private LatLng latLng;
+    private DatabaseReference mDatabaseReference;
 
+    private DatabaseReference cDatabaseReference;
 //    @Override
 //    public void onCreate(@Nullable Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -50,9 +67,11 @@ private TextView tv4;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        // return super.onCreateView(inflater, container, savedInstanceState);
-
+        sm=SmsManager.getDefault();
         //return inflater.inflate(R.layout.frag_contact,container,false) ;
         View v= inflater.inflate(R.layout.frag_home,container,false) ;
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        cDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
 
 //        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
@@ -65,11 +84,15 @@ private TextView tv4;
         ph_fakecall = v.findViewById(R.id.ph_fakecall);
         ph_camera = v.findViewById(R.id.ph_camera);
         ph_mail = v.findViewById(R.id.ph_mail);
-        tv4 = v.findViewById(R.id.tv4);
+        //tvM = v.findViewById(R.id.tv4);
         Cs1 = v.findViewById(R.id.Cs1);
-        Cs2 = v.findViewById(R.id.Cs2);
-        Cs3 = v.findViewById(R.id.Cs3);
+        //Cs2 = v.findViewById(R.id.Cs2);
+        Cs3 = v.findViewById(R.id.C2);
 
+        Cs2 = v.findViewById(R.id.Cs2);
+        //tvM= v.findViewById(R.id.C1);
+        //String mmmm="aaa";
+        //Cs1 = v.findViewById(R.id.C1);
 
         View alertLayout = inflater.inflate(R.layout.popup_layout, null);
         AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
@@ -114,26 +137,67 @@ private TextView tv4;
 //                        isPlaing = true;
 //                    }
 //                }
-        GPSTracker mGPS = new GPSTracker(getActivity());
+//        GPSTracker mGPS = new GPSTracker(getActivity());
+//
+//
+//        if(mGPS.canGetLocation ){
+//            mGPS.getLocation();
+        //latLng = new LatLng(location.getLatitude(),location.getLongitude());
+          //  tv4.setText(  mMap.getLatitude() + "," + mMap.getLongitude());
+//
+//        }else{
+//            tv4.setText("Unabletofind");
+////            System.out.println("Unable");
+//        }
+//
+//        sm= SmsManager.getDefault();
 
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("MapLoc");
+        mDatabaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Mdb = dataSnapshot.child("LOC").getValue().toString();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) { }
+        });
+        cDatabaseReference = FirebaseDatabase.getInstance().getReference().child("ContactRoom");
 
-        if(mGPS.canGetLocation ){
-            mGPS.getLocation();
-            tv4.setText(  mGPS.getLatitude() + "," + mGPS.getLongitude());
+        //cDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
-        }else{
-            tv4.setText("Unabletofind");
-//            System.out.println("Unable");
-        }
+        cDatabaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
 
-        sm= SmsManager.getDefault();
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                 pp = dataSnapshot.child("etC1").getValue().toString();
+                 pp1 = dataSnapshot.child("etC2").getValue().toString();
+                 pp2 = dataSnapshot.child("etC3").getValue().toString();
+                // uu[0] = dataSnapshot.child("etC1").getValue().toString();
+//                        String etC2db = dataSnapshot.child("etC2").getValue().toString();
+//                        String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//                        list.clear();
+//                        list.add(dataSnapshot.child("etC1").getValue().toString());
+//                        Intent intent = new Intent(getActivity(),ContactRoom.class);
+//                        intent.putExtra("pp",uu[0]);
+//                        startActivity(intent);
+                //    Cs1.setText(uu[0]);
+//                        Cs2.setText(etC2db);
+//                        Cs3.setText(etC3db);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+//
+        });
 
 
         final MediaPlayer sound = MediaPlayer.create(getActivity(),R.raw.policesiren);
 
         ph_alarm.setOnClickListener(new View.OnClickListener() {
             @Override
-
+//alarm og
             public void onClick(View v) {
                // int flagOn=0;
                // boolean flag = true;
@@ -148,6 +212,65 @@ private TextView tv4;
                 }
 
             }
+
+            //try
+//            public void onClick(View v) {
+//                cDatabaseReference = FirebaseDatabase.getInstance().getReference().child("ContactRoom");
+//                cDatabaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        String etC1db = dataSnapshot.child("etC1").getValue().toString();
+//                        String etC2db = dataSnapshot.child("etC2").getValue().toString();
+//                        String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//
+//                        Cs1.setText(etC1db);
+//                        Cs2.setText(etC2db);
+//                        Cs3.setText(etC3db);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//                mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("MapLoc");
+//
+//
+//                mDatabaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+////                        if(dataSnapshot.exists()){
+////
+////                        }
+//                        // String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//
+//
+//                        String Mdb = dataSnapshot.child("LOC").getValue().toString();
+//                        tvM.setText(Mdb);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//
+//
+
+//                sm.sendTextMessage(Cs1.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+//                sm.sendTextMessage(Cs2.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+//                sm.sendTextMessage(Cs3.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+
+                //Toast.makeText(this,"message sent",Toast.LENGTH_LONG).show();
+
+                //Toast.makeText(getActivity(), "SOS sent", Toast.LENGTH_SHORT).show();
+//                Intent intent;
+//                intent = new Intent(getActivity(),MapsActivity.class);
+//                startActivity(intent);
+
+            //}
+
+
           });
         ph_mail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +286,68 @@ private TextView tv4;
 //        startActivity(intent);
 //    }
 //});
+
+        ph_sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                cDatabaseReference = FirebaseDatabase.getInstance().getReference().child("ContactRoom");
+//                cDatabaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        String etC1db = dataSnapshot.child("etC1").getValue().toString();
+//                        String etC2db = dataSnapshot.child("etC2").getValue().toString();
+//                        String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//
+//                        Cs1.setText(etC1db);
+//                        Cs2.setText(etC2db);
+//                        Cs3.setText(etC3db);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//                mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("MapLoc");
+//
+//
+//                mDatabaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+////                        if(dataSnapshot.exists()){
+////
+////                        }
+//                       // String etC3db = dataSnapshot.child("etC3").getValue().toString();
+//
+//
+//                        String Mdb = dataSnapshot.child("LOC").getValue().toString();
+//                        tvM.setText(Mdb);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+////
+////
+//                sm.sendTextMessage(Cs1.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+//                sm.sendTextMessage(Cs2.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+//                sm.sendTextMessage(Cs3.getText().toString(),null,"I'm in danger..My current location is http://maps.google.com/?q="+tvM.getText().toString(),null,null);
+//
+//                //Toast.makeText(this,"message sent",Toast.LENGTH_LONG).show();
+//
+//                //Toast.makeText(getActivity(), "SOS sent", Toast.LENGTH_SHORT).show();
+
+
+                Intent intent;
+                intent = new Intent(getActivity(),MapsActivity.class);
+                startActivity(intent);
+
+                sendSMSMessage();
+
+            }
+        });
 
 ph_camera.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -195,7 +380,10 @@ ph_fakecall.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
         Intent intent = new Intent(getActivity(), RecievedCall.class);
         startActivity(intent);
+
+      //  sendSMSMessage();
     }
+
 });
 
 
@@ -252,6 +440,7 @@ ph_fakecall.setOnClickListener(new View.OnClickListener() {
 
         return v;
     }
+
 //
 //    @Override
 //    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -268,5 +457,37 @@ ph_fakecall.setOnClickListener(new View.OnClickListener() {
 //        Toast.makeText(getActivity(),"message sent",Toast.LENGTH_LONG).show();
 //
 //    }
+//    String etC2db;
+//    String etC3db;
+    //DatabaseReference = FirebaseDatabase.getInstance().getReference().child("ContactRoom");
+
+    //final ArrayList<String> list= new ArrayList<>();
+    //final ArrayAdapter adapter =new ArrayAdapter<String>(this,R.layout.list_item,list);
+    //listView.setAdapter(adapter);
+    final String[] uu = {new String()};
+
+
+    protected void sendSMSMessage() {
+//
+
+
+
+//String mm= tvM.getText().toString();
+//String pp= uu[0];
+
+// String pp=Cs1.getText().toString();
+        //mmm = mm.getText().toString();
+
+        SmsManager manager = SmsManager.getDefault();
+
+        manager.sendTextMessage(pp,null,"I'm in Danger...\nMy current location is http://maps.google.com/?q="+Mdb,null,null);
+        manager.sendTextMessage(pp1,null,"I'm in Danger...\nMy current location is http://maps.google.com/?q="+Mdb,null,null);
+        manager.sendTextMessage(pp2,null,"I'm in Danger...\nMy current location is http://maps.google.com/?q="+Mdb,null,null);
+
+        Toast.makeText(getActivity(),"Sent SOS",Toast.LENGTH_LONG).show();
+
+        // Toast.makeText(getActivity(),""+pp+" "+Mdb,Toast.LENGTH_LONG).show();
+
+    }
 
 }

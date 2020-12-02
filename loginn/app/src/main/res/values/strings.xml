@@ -63,4 +63,5 @@ SOFTWARE.
 
 Make Sure that "Google" ,"WhatApp","Gmail" App is Installed on your phone and you give this App proper Access Permission like Call, SMS, Microphone, Camera, GPS.
     </string>
+    <string name="title_activity_maps">Map</string>
 </resources>

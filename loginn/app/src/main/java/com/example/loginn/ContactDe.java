@@ -28,7 +28,6 @@ public class ContactDe extends AppCompatActivity {
     private Button btnBack;
     private Button btnRefresh;
     private DatabaseReference mDatabaseReference;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +56,7 @@ public class ContactDe extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        final String[] etC1db = {new String()};
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,14 +73,13 @@ public class ContactDe extends AppCompatActivity {
                         String etCN2db = dataSnapshot.child("etCN2").getValue().toString();
                         String etCN3db = dataSnapshot.child("etCN3").getValue().toString();
 
-                        String etC1db = dataSnapshot.child("etC1").getValue().toString();
+                        etC1db[0] = dataSnapshot.child("etC1").getValue().toString();
                         String etC2db = dataSnapshot.child("etC2").getValue().toString();
                         String etC3db = dataSnapshot.child("etC3").getValue().toString();
-
                         CN1.setText(etCN1db);
                         CN2.setText(etCN2db);
                         CN3.setText(etCN3db);
-                        C1.setText(etC1db);
+                        C1.setText(etC1db[0]);
                         C2.setText(etC2db);
                         C3.setText(etC3db);
                     }
@@ -91,6 +89,10 @@ public class ContactDe extends AppCompatActivity {
 
                     }
                 });
+                   // String p1=C1.getText().toString();
+                String p1= etC1db[0];
+
+              //  Toast.makeText(ContactDe.this, p1, Toast.LENGTH_SHORT).show();
             }
         });
 
