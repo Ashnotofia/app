@@ -11,7 +11,7 @@
     <color name="red">#960018</color>
     <color name="matblack">#171717</color>
 
-
+    <color name="lightb">#1b1b1b</color>
 
 
 
@@ -24,9 +24,9 @@
     <color name="blackdark">#141414</color>
 
 
-    <color name="colorPrimary">#53001F</color>
-    <color name="colorPrimaryDark">#46001B</color>
-    <color name="bur">#53001F</color>
+    <color name="colorPrimary">#171717</color>
+    <color name="colorPrimaryDark">#171717</color>
+    <color name="bur">#000000</color>
     <color name="lightbur">#E9C5DB</color>
     <color name="white">#F2F3F4</color>
 

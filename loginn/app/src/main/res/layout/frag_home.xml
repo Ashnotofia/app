@@ -32,11 +32,11 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="0dp"
             android:clickable="true"
-            android:src="@drawable/ic_sos">
+            android:src="@drawable/ic_sosem">
 
         </ImageView>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:paddingLeft="0dp"
@@ -56,7 +56,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="50dp"
                 android:clickable="true"
-                android:src="@drawable/ic_alarm">
+                android:src="@drawable/ic_bell">
 
             </ImageView>
 
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="50dp"
                 android:layout_alignLeft="@+id/ph_alarm"
                 android:clickable="true"
-                android:src="@drawable/ic_fakecall">
+                android:src="@drawable/ic_cs">
 
             </ImageView>
 
@@ -90,7 +90,7 @@
                 android:layout_marginBottom="50dp"
                 android:layout_alignTop="@+id/ph_alarm"
                 android:clickable="true"
-                android:src="@drawable/ic_cam">
+                android:src="@drawable/ic_can">
 
             </ImageView>
 
@@ -98,17 +98,17 @@
                 android:id="@+id/ph_mail"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_alignLeft="@+id/ph_camera"
+                android:layout_alignTop="@+id/ph_fakecall"
                 android:layout_gravity="center"
                 android:layout_marginStart="190dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="170dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="172dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="50dp"
-                android:layout_alignLeft="@+id/ph_camera"
-                android:layout_alignTop="@+id/ph_fakecall"
                 android:clickable="true"
-                android:src="@drawable/ic_icons8_whatsapp">
+                android:src="@drawable/ic_whatsapp">
 
             </ImageView>
 
