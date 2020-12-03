@@ -37,7 +37,7 @@
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
 
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/ic_can"
         tools:ignore="VectorDrawableCompat" />
 
     <LinearLayout
@@ -78,7 +78,6 @@
     </LinearLayout>
     <Button
         android:id="@+id/startCamera"
-        android:onClick="dispatchTakePictureIntent"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
