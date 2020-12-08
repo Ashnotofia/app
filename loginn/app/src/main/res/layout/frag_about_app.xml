@@ -69,6 +69,24 @@
             android:text="@string/About_App"
             android:textColor="@color/matblack" />
 
+        <TextView
+            android:id="@+id/tvMade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="13dp"
+            android:ems="30"
+            android:fontFamily="@font/welcome"
+
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/Made"
+            android:textColor="@color/matblack" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

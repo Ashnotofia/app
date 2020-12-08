@@ -29,8 +29,7 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="2dp"
             android:clickable="true"
-            android:src="@drawable/profile_nav_header">
-
+            android:src="@drawable/ic_pic_ic">
         </ImageView>
 
 

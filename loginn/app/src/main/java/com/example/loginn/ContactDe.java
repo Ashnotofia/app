@@ -27,6 +27,7 @@ public class ContactDe extends AppCompatActivity {
     private String userid;
     private Button btnBack;
     private Button btnRefresh;
+    private TextView tvConInfo;
     private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,8 @@ public class ContactDe extends AppCompatActivity {
         CN1 = findViewById(R.id.CN1);
         CN2 = findViewById(R.id.CN2);
         CN3 = findViewById(R.id.CN3);
+
+        tvConInfo = findViewById(R.id.tvConInfo);
         //contactRoom=new ContactRoom();
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
        // Toast.makeText(getActivity(), "" + currentFirebaseUser.getUid(), Toast.LENGTH_SHORT).show();

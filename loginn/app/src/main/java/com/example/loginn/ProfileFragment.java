@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -84,6 +85,8 @@ public class ProfileFragment extends Fragment {
 //                toast. show();
                 ProfileRoom profileRoom = new ProfileRoom(proName.getText().toString(),proMyphone.getText().toString(), proGName.getText().toString(),proGphone.getText().toString(), proDOB.getText().toString(),proAge.getText().toString(),proEmail.getText().toString(),proAddress.getText().toString());
                 mDatabaseReference.child("ProfileRoom").setValue(profileRoom);
+                Toast.makeText(getActivity(), "Profile Data Saved", Toast.LENGTH_SHORT).show();
+
             }
         });
 

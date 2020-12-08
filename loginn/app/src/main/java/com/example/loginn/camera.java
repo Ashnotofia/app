@@ -81,6 +81,16 @@ public class camera extends AppCompatActivity {
                 saveToGallery();
             }
         });
+
+        mClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+                //Intent intent = new Intent(Location.this,MessageActivity.class);
+                Intent intent = new Intent(camera.this,HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 //
     }
 

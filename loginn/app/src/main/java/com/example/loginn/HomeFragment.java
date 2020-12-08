@@ -372,7 +372,7 @@ public class HomeFragment extends Fragment {
         manager.sendTextMessage(pp1, null, "I'm in Danger...\nMy current location is http://maps.google.com/?q=" + Mdb, null, null);
         manager.sendTextMessage(pp2, null, "I'm in Danger...\nMy current location is http://maps.google.com/?q=" + Mdb, null, null);
 
-        Toast.makeText(getActivity(), "Sent SOS", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Emergency SOS is sent!", Toast.LENGTH_LONG).show();
 
         // Toast.makeText(getActivity(),""+pp+" "+Mdb,Toast.LENGTH_LONG).show();
 
@@ -388,10 +388,10 @@ public class HomeFragment extends Fragment {
             mAccelCurrent = (float) Math.sqrt((double) (x * x + y * y + z * z));
             float delta = mAccelCurrent - mAccelLast;
             mAccel = mAccel * 0.9f + delta;
-            int shake_count=0;
-            if (mAccel > 38) {
-                //sendSMSMessage();
-                Toast.makeText(getActivity(), "Shake event detected", Toast.LENGTH_SHORT).show();
+            //int shake_count=0;
+            if (mAccel > 30) {
+                sendSMSMessage();
+               // Toast.makeText(getActivity(), "Shake event detected", Toast.LENGTH_SHORT).show();
             }
         }
         @Override

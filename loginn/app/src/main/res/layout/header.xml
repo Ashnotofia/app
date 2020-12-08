@@ -46,11 +46,11 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="1dp"
             android:textAlignment="center"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold"
             android:ems="30"
             android:background="@color/bur"
-            android:text="UserName"
+            android:text="xnabhilash14@gmail.com"
             android:textColor="@color/white"
             />
 

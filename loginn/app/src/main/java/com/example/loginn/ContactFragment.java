@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -89,6 +90,7 @@ public class ContactFragment extends Fragment {
 
                 ContactRoom contactRoom = new ContactRoom(etCN1.getText().toString(),etC1.getText().toString(), etCN2.getText().toString(),etC2.getText().toString(), etCN3.getText().toString(),etC3.getText().toString());
                 mDatabaseReference.child("ContactRoom").setValue(contactRoom);
+                Toast.makeText(getActivity(), "Contact Saved", Toast.LENGTH_SHORT).show();
                 //reference.child(userid).push().setValue("contactRoom");
 
 

@@ -1,13 +1,11 @@
 package com.example.loginn;
 
-import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btnGoogle;
 
     private FirebaseAuth mAuth;
-    private ProgressBar progressBar;
+  //  private ProgressBar progressBar;
 
 
     @Override
@@ -74,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
         tvOR = (TextView) findViewById(R.id.tvOR);
         btnFB = (Button) findViewById(R.id.btnFB);
         btnGoogle = (Button) findViewById(R.id.btnGoogle);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+       // progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         tvAlreadyR.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,11 +128,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    private void playProgress() {
-        ObjectAnimator.ofInt(progressBar, "progress", 100)
-                .setDuration(2000)
-                .start();
-    }
+//    private void playProgress() {
+//        ObjectAnimator.ofInt(progressBar, "progress", 100)
+//                .setDuration(2000)
+//                .start();
+//    }
 
     private void registerUser(String email, String pass) {
         mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(

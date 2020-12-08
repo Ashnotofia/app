@@ -26,6 +26,7 @@ public class ProfileDe extends AppCompatActivity {
     private TextView page;
     private Button btnBack;
     private Button btnRefresh;
+    private TextView tvProInfo;
     private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,9 @@ public class ProfileDe extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBack);
         btnRefresh = findViewById(R.id.btnRefresh);
+
+        tvProInfo = findViewById(R.id.tvProInfo);
+
 
         pg = findViewById(R.id.pg);
         pgn = findViewById(R.id.pgn);

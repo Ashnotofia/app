@@ -1,5 +1,6 @@
 package com.example.loginn;
 
+import android.content.Intent;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -35,9 +36,9 @@ public class RecievedCall extends AppCompatActivity implements View.OnClickListe
                     r.stop();
                     myVib.cancel();
                 }
-//                Intent intent1 = new Intent(this, VoiceCallActivity.class);
-//                startActivity(intent1);
-//                finish();
+                Intent intent1 = new Intent(this, VoiceCallActivity.class);
+                startActivity(intent1);
+                finish();
                 break;
 
             case R.id.end_call:
