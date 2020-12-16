@@ -23,14 +23,7 @@
                     android:icon="@drawable/ic_contacti"
                     android:id="@+id/nav_contact"
                     android:title="@string/contact" />
-                <item
-                    android:icon="@drawable/ic_storage_24px"
-                    android:title="Storage"
-                    android:id="@+id/nav_storage"/>
-                <item
-                    android:icon="@drawable/ic_movie_24px"
-                    android:id="@+id/nav_media"
-                    android:title="Media" />
+
                 </group>
             </menu>
         </item>

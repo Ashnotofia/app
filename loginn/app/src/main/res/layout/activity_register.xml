@@ -29,20 +29,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="130dp"
             android:layout_marginRight="2dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/welcome"
             android:text="WELCOME TO S-I-D-E-K-I-C-K"
             android:textAlignment="center"
             android:textColor="@color/matblack"
-            android:textSize="21sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
-
-
-
-
-
 
 
         <EditText
@@ -106,55 +101,7 @@
             android:textStyle="bold">
         </Button>
 
-        <TextView
-            android:id="@+id/tvOR"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="1dp"
-            android:text="OR"
-            android:textAlignment="center"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/btnFB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="2dp"
-            android:text="Continue with FACEBOOK"
-            android:textAllCaps="false"
-            android:textSize="10dp"
-            android:theme="@style/ButtonStyle"
-            android:drawableLeft="@drawable/ic_facebook"
-            android:textStyle="bold">
-
-        </Button>
-
-        <Button
-            android:id="@+id/btnGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="2dp"
-            android:text="Continue with GOOGLE"
-            android:textAllCaps="false"
-            android:textSize="10dp"
-            android:theme="@style/ButtonStyle"
-            android:drawableLeft="@drawable/ic_google"
-            android:textStyle="bold">
-
-        </Button>
 
         <View style="@style/Divider"
         android:layout_width="match_parent"

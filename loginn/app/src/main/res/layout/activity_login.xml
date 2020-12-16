@@ -15,7 +15,7 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingTop="200dp"
+        android:paddingTop="170dp"
         android:paddingRight="24dp"
         android:paddingBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"

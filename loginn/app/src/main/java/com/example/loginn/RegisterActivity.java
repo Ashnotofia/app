@@ -3,6 +3,7 @@ package com.example.loginn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -106,20 +107,36 @@ public class RegisterActivity extends AppCompatActivity {
 //                String phone = etPhoneR.getText().toString().trim();
                 String email = etEmailR.getText().toString().trim();
                 String pass = etPassR.getText().toString().trim();
+                String repass = etPassReR.getText().toString().trim();
 //                String repass = etPassReR.getText().toString().trim();
 //
-                if (TextUtils.isEmpty(email)) {
-                    etEmailR.setError("Email is required");
-                     return;
+//                if (TextUtils.isEmpty(email)) {
+//                    etEmailR.setError("Email is required");
+//                     return;
+//                }
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches() || (TextUtils.isEmpty(email)))
+                {
+                    etEmailR.setError("Enter a valid E-mail id");
+                    return;
+                    //return false;
                 }
                 if (TextUtils.isEmpty(pass)) {
                     etPassR.setError("Password is required");
                     return;
                 }
+                if (TextUtils.isEmpty(repass)) {
+                    etPassReR.setError("Password not matched");
+                    return;
+                }
                 if (pass.length() < 6) {
                     etPassR.setError("Password must be atleast 6 characters");
                      return;
-                } else {
+                }
+                if(!(pass.equals(repass))){
+                    //registerUser(email, pass);
+                    etPassReR.setError("Password not matched");
+                }
+                else {
                     registerUser(email, pass);
                 }
             }

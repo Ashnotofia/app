@@ -54,7 +54,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/bur"
-            android:hint="First WhatsApp/Contact Name"
+            android:hint="WhatsApp/Contact Name"
             />
 
         <EditText
